@@ -113,7 +113,7 @@ public class gameManager : MonoBehaviour
 
 
         levelUpScreen.gameObject.SetActive(true);
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
 
         UpdateExperienceText();
@@ -185,6 +185,7 @@ public class gameManager : MonoBehaviour
         gameOverScreen.gameObject.SetActive(true);
         gameUi.gameObject.SetActive(false);
         levelUpScreen.gameObject.SetActive(false);
+        newHighScoreText.gameObject.SetActive(false);
         isGameActive = false;
         if (timer > MainManager.Instance.HighScore)
         {

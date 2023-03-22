@@ -56,19 +56,6 @@ public class PlayerLogic : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("Hit by enemy");
-        }
-
-        //if (collision.gameObject.CompareTag("Powerup"))
-        //{
-        //    Heal(5);
-        //}
-    }
-
     public void HitPlayer(float attackPower)
     {
         hp -= (attackPower / armor);
